@@ -14,7 +14,7 @@ def get_inflow():
     nb_days = 5
     inflow_scenarios = {}
     for day in range(1, 1+nb_days):
-        one_day_wind = historical_inflow_data[(historical_inflow_data.index.month==1) & (historical_inflow__data.index.day==day)]['national']*max_wind
+        one_day_wind = historical_inflow_data[(historical_inflow_data.index.month==1) & (historical_inflow_data.index.day==day)]['national']*max_wind
         for year in range(40):
             inflow_scenarios[year+1+(day-1)*40] = one_day_wind[24*year:24*(year+1)].reset_index(drop=True)
 
